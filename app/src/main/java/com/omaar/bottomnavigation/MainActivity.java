@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigation = findViewById(R.id.tabs);
 
-        bottomNavigation.add(f1, R.drawable.home_animated_icon);
+        bottomNavigation.add(f1, R.drawable.home_animated_icon, "home");
         bottomNavigation.add(f2, R.drawable.control_panel_animated_icon);
-        bottomNavigation.add(f3, R.drawable.contact_us_animated_icon);
+        bottomNavigation.add(f3, R.drawable.contact_us_animated_icon, "contact us");
         bottomNavigation.add(f4, R.drawable.settings_animated_icon);
         bottomNavigation.add(f5, R.drawable.places_animated_icon);
 
