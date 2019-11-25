@@ -420,4 +420,8 @@ public class BottomNavigation extends LinearLayout {
 
     }
 
+    public ViewPager getViewPager() {
+        return viewPager;
+    }
+
 }
