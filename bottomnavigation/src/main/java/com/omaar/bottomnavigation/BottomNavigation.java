@@ -19,6 +19,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
@@ -49,6 +50,9 @@ public class BottomNavigation extends LinearLayout {
 
     //create the view pager object
     private ViewPager viewPager;
+
+    //create the adapter object
+    ViewPagerAdapter viewPagerAadpter ;
 
     private int size = 0;
 
@@ -203,7 +207,7 @@ public class BottomNavigation extends LinearLayout {
         bottomnavigation.addView(relativeLayout);
 
         //create and initialize a view pager adapter object with the three fragments
-        ViewPagerAdapter viewPagerAadpter = new ViewPagerAdapter(((AppCompatActivity) mContext).getSupportFragmentManager()
+        viewPagerAadpter = new ViewPagerAdapter(((AppCompatActivity) mContext).getSupportFragmentManager()
                 , fragmentList);
 
         //setup the viewpager with the adapter
@@ -420,8 +424,18 @@ public class BottomNavigation extends LinearLayout {
 
     }
 
+    /**
+     * A method called to return the viewpager instance
+     */
     public ViewPager getViewPager() {
         return viewPager;
+    }
+
+    /**
+     * A method called to return the adapter instance
+     */
+    public FragmentPagerAdapter getAdapter() {
+        return getAdapter();
     }
 
 }
